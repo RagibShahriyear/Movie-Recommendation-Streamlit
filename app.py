@@ -32,7 +32,7 @@ def recommend(movie):
     for i in distances[1:6]:
         movie_id = movies_df.iloc[i[0]].movie_id
         RMP.append(fetch_poster(movie_id))
-        recommended_movies.append(movies_df.iloc[0].title)
+        recommended_movies.append(movies_df.iloc[i[0]].title)
 
     return recommended_movies, RMP
 
